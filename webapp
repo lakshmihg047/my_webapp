@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS=credentials('Dockerid')
-        IMAGE_NAME = "lakshmihg047/my_webapp"
+        IMAGE_NAME = "lakshmihg/webapp"
        
     }
 
