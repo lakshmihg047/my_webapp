@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DockERHUB_CREDENTIALS=credentials('Dockerid')
+        DOCKERHUB_CREDENTIALS=credentials('Dockerid')
         IMAGE_NAME = "lakshmihg047/my_webapp"
        
     }
@@ -11,8 +11,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/lakshmihg047/my_webapp'
-                    credentials:'Dockerid'
+                    url: 'https://github.com/lakshmihg047/my_webapp',
+                    credentialsId:'Dockerid'
             }
         }
 
